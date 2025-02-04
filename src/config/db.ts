@@ -11,8 +11,5 @@ const connectDB = async () => {
         process.exit(1); // Exit process with failure
     }
 };
-// username - vedantdebadwar
-// password - 1QIr8hMiB8tDthA5
-// mongo uri - mongodb+srv://vedantdebadwar:1QIr8hMiB8tDthA5@cluster0.l6yhz.mongodb.net/
 
 export default connectDB;

@@ -6,8 +6,7 @@
   "scripts": {
     "start": "node build/server.js",
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
-    "build": "tsc",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "build": "tsc"
   },
   "dependencies": {
     "@google-cloud/dialogflow": "^6.14.0",
