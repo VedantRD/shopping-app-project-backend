@@ -24,7 +24,7 @@ app.use('/users', userRoutes);
 app.use('/dialogflow', dialogflowRoutes);
 
 app.use('/', (req: Request, res: Response) => {
-    res.json('Welcome to my shopping app');
+    res.json('Welcome to my shopping app ');
 })
 
 // Global error handler
