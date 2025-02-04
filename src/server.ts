@@ -1,4 +1,4 @@
-import express, { Application } from 'express';
+import express, { Application, Request, Response } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import connectDB from './config/db';
@@ -22,6 +22,10 @@ connectDB();
 app.use('/products', productRoutes);
 app.use('/users', userRoutes);
 app.use('/dialogflow', dialogflowRoutes);
+
+app.use('/', (req: Request, res: Response) => {
+    res.json('Welcome to my shopping app');
+})
 
 // Global error handler
 app.use(errorHandler);

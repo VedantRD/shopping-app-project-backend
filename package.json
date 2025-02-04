@@ -2,9 +2,9 @@
   "name": "shopping-app-backend",
   "version": "1.0.0",
   "description": "MERN stack backend with Express and MongoDB",
-  "main": "dist/server.js",
+  "main": "build/server.js",
   "scripts": {
-    "start": "node dist/server.js",
+    "start": "node build/server.js",
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
     "build": "tsc",
     "heroku-postbuild": "cd client && npm install && npm run build"
