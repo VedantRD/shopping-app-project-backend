@@ -7,8 +7,5 @@
             "src": "/(.*)",
             "dest": "/build/server.js"
         }
-    ],
-    "env": {
-        "MONGO_URI": "@MONGO_URI"
-    }
+    ]
 }
