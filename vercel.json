@@ -1,18 +1,11 @@
 {
     "version": 2,
-    "builds": [
-        {
-            "src": "build/server.js",
-            "use": "@vercel/node"
-        }
-    ],
+    "buildCommand": "npm run build",
+    "outputDirectory": "build",
     "routes": [
         {
             "src": "/(.*)",
             "dest": "/build/server.js"
         }
-    ],
-    "env": {
-        "MONGO_URI": "@MONGO_URI"
-    }
+    ]
 }
