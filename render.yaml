@@ -1,0 +1,17 @@
+services:
+  - name: shopping-app-backend
+    type: web
+    env: node
+    plan: free  # Use "starter" for better performance
+    region: singapore    # Change to your preferred region
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_VERSION
+        value: 16
+      - key: PORT
+        value: 5000
+      - key: MONGO_URI
+        sync: false  # Set in Render's dashboard for security
+      - key: SECRET_KEY
+        sync: false  # Example of another environment variable
