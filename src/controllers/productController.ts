@@ -6,8 +6,16 @@ const productService = new ProductService()
 
 export const getAllProducts = async (req: Request, res: Response) => {
     try {
-        console.log('hereeee')
         return await productService.getAllProducts(req, res)
+    } catch (err: any) {
+        res.status(500).json({ error: err.message });
+    }
+};
+
+export const deleteProduct = async (req: Request, res: Response) => {
+    try {
+        console.log('delete product controller')
+        return await productService.deleteProduct(req, res)
     } catch (err: any) {
         res.status(500).json({ error: err.message });
     }
